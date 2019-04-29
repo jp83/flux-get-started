@@ -21,7 +21,12 @@ spec:
       requests:
         memory: 32Mi
         cpu: 10m
-    serviceType: ClusterIP
+    #ingress:
+    #  enabled: true
+    #  annotations:
+    #    kubernetes.io/ingress.class: "traefik"
+    #serviceType: ClusterIP
+    serviceType: NodePort
     mariadb:
       persistence:
         enabled: false
